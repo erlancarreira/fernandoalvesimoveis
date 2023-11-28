@@ -1,95 +1,145 @@
+
+
+import Filter from '@/components/Filter'
+import Carousel from '@/components/Carousel'
+import Container from '@mui/material/Container'
+import CardLancamentos from '@/components/CardLancamentos'
+
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+//import Grid from '@mui/material/Grid'
+
+import Typography from '@mui/material/Typography'
+//import Divider from '@mui/material/Divider'
+import CardDefault from '@/components/CardDefault'
+
 import Image from 'next/image'
-import styles from './page.module.css'
+import casaIcon from '../../public/static/images/casas_icon.png'
+import apartamentoIcon from '../../public/static/images/apartamentos_icon.png'
+import { data } from '@/services/fakeData'
 
-export default function Home() {
+
+export default function Inicio() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      
+        <Carousel >
+          <Container sx={{ position: 'absolute', bottom: 0, left: 0, right: 0 }} >
+            <Filter />
+          </Container>
+        </Carousel> 
+        
+        <Box component={'section'} mb={5} sx={{marginTop: '20px', width: '100%'}} >
+          <Container> 
+            <Stack flex={'0 0 100%'}>
+              <Typography fontSize={'2rem'}> 
+                Lançamentos
+              </Typography>
+            </Stack>
+            
+            
+            <Stack 
+              sx={{
+                display: 'flex',
+                flex: 1,
+                flexDirection: { lg: 'row', md: 'row', xs: 'column', sm: 'column', },
+                
+              }} 
+              gap={2} 
+               
+            >
+              {data.lancamentos.map( (item, index) => <CardLancamentos key={index} {...item} /> )}
+            </Stack>
+             
+          </Container>
+        </Box>
+         
+        
+        <Container sx={{position: 'relative'}} >
+          {/* <Divider sx={{width: '100%', py: 2 }} orientation='horizontal' /> */}
+          <Image style={{ 
+            position: 'absolute', 
+            top: '-20px', 
+            left: 0, 
+            right: 0, 
+            margin: 'auto' 
+          }} width={120} src={casaIcon} alt={'Imagem de uma logo de casas'} />
+        </Container >
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Box component={'section'} sx={{ 
+            width: '100%', 
+            py: '40px', 
+            pb: '60px',
+            backgroundColor: 'rgb(241, 243, 244)'
+          }} 
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <Container > 
+            <Stack direction={'column'} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap'} spacing={2}>
+              <Stack >
+                <Typography fontSize={'2rem'}> 
+                  Imóveis à venda
+                </Typography>
+              </Stack>
+              
+              <Stack 
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  flexWrap: { lg: 'nowrap', md: 'nowrap', xs: 'wrap', sm: 'wrap', }
+                }} gap={2} 
+              >
+                {[0,1,2].map( index => <CardDefault key={index} />)}
+              </Stack>
+              
+            </Stack>
+            
+          </Container>
+        </Box>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <Container sx={{position: 'relative'}} >
+          {/* <Divider sx={{width: '100%', py: 2 }} orientation='horizontal' /> */}
+          <Image style={{ 
+            position: 'absolute', 
+            top: '-20px', 
+            left: 0, 
+            right: 0, 
+            margin: 'auto' 
+            }} width={120} src={apartamentoIcon} alt={'Imagem de uma logo de apartamentos'} />
+        </Container>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Box component={'section'} sx={{ 
+            width: '100%', 
+            py: '40px', 
+            pb: '60px',
+           
+          }} 
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <Container> 
+            <Stack direction={'column'} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap'} spacing={2}>
+              <Stack>
+                
+                <Typography fontSize={'2rem'}> 
+                  Apartamentos à venda
+                </Typography>
+              </Stack>
+              
+              <Stack sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  flexWrap: { lg: 'nowrap', md: 'nowrap', xs: 'wrap', sm: 'wrap', }
+                }} 
+                gap={2} 
+              >
+                <CardDefault />
+                <CardDefault />
+                <CardDefault />
+              </Stack>
+              
+            </Stack>
+            
+          </Container>
+        </Box>
+     
+    </>
   )
 }
