@@ -6,6 +6,8 @@ import Image from 'next/image'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material'
 
+import backgroundImage from '../../asserts/images/background_image.jpg'
+
 const ImageOverlay = () => {
   return <div style={{ 
     position: 'absolute', 
@@ -38,7 +40,7 @@ const BackgroundImage = () => {
         zIndex: 0,
         
       }}
-      src={'/static/images/background_image.jpg'} 
+      src={backgroundImage} 
       alt={'Imagem de fundo de background'}
     />
     <ImageOverlay />

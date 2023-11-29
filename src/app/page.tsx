@@ -14,8 +14,8 @@ import Typography from '@mui/material/Typography'
 import CardDefault from '@/components/CardDefault'
 
 import Image from 'next/image'
-import casaIcon from '../../public/static/images/casas_icon.png'
-import apartamentoIcon from '../../public/static/images/apartamentos_icon.png'
+import casaIcon from '../asserts/images/casas_icon.png'
+import apartamentoIcon from '../asserts/images/apartamentos_icon.png'
 import { data } from '@/services/fakeData'
 
 
@@ -104,7 +104,7 @@ export default function Inicio() {
             left: 0, 
             right: 0, 
             margin: 'auto' 
-            }} width={120} src={apartamentoIcon} alt={'Imagem de uma logo de apartamentos'} />
+            }} width={120} height={46} src={apartamentoIcon.src} alt={'Imagem de uma logo de apartamentos'} />
         </Container>
 
         <Box component={'section'} sx={{ 

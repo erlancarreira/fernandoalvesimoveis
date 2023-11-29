@@ -3,11 +3,12 @@ import FilterOrderBy from '@/components/FilterOrderBy'
 import SiderBar from '@/components/SideBar'
 
 import Stack from '@mui/material/Stack'
-import Grid from '@mui/material/Grid'
+
 import Card from '@mui/material/Card'
-import CardDefault from '@/components/CardDefault'
+
 import CardLancamentos from '@/components/CardLancamentos'
 
+import imageLancamentos from '../../../asserts/images/image_1.jpg'
 
 
 export default function Lancamentos() {
@@ -52,7 +53,7 @@ export default function Lancamentos() {
                 }
               }}
             >
-              <CardLancamentos src={'/static/images/image_1.jpg'} alt={'Imagem da casa em Monguba'} />
+              <CardLancamentos src={imageLancamentos.src} alt={'Imagem da casa em Monguba'} />
             </Stack> 
           })}      
         

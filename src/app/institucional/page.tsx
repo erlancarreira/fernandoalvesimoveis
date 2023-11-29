@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-import chavesLogo from '../../../public/static/images/chave_dos_seus_sonhos.png'
+import chavesLogo from '../../assets/images/chave_dos_seus_sonhos.png'
 import Image from 'next/image'
 
 export default function Institucional() {

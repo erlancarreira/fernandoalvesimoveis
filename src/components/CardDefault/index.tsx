@@ -5,9 +5,10 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 
-import quartos from '../../../public/static/images/quarto.png'
-import banheiro from '../../../public/static/images/banheira_simples.png'
-import garagem from '../../../public/static/images/carro-esporte.png'
+import quartos from '../../asserts/images/quarto.png'
+import banheiro from '../../asserts/images/banheira_simples.png'
+import garagem from '../../asserts/images/carro-esporte.png'
+import assert_image1 from '../../asserts/images/image_1.jpg'
 
 import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
@@ -31,7 +32,7 @@ const CardImage = () => {
 
     return <Button sx={{p:0, width: '100%'}}>
         <Image 
-            src={'/static/images/image_1.jpg'} 
+            src={assert_image1.src} 
             alt={'Imagem do imovel'} 
             width={0} 
             height={0} 
@@ -78,16 +79,16 @@ export default function CardDefault({ sx }: { sx?: SxProps }) {
                         }}
                     >
                         <span style={{fontSize: '18px'}}>2x</span>
-                        <Image src={quartos} alt={'Quantidade de quartos'} width={32} height={32} />
+                        <Image src={quartos.src} alt={'Quantidade de quartos'} width={32} height={32} />
                     </Stack>
                     
                 
                     <Stack direction={'row'} alignItems={'flex-end'} justifyContent={'center'} px={2} spacing={'5px'}>
-                        <span style={{fontSize: '18px'}}>2x</span><Image src={banheiro} alt={'Quantidade de quartos'} width={32} height={32} />
+                        <span style={{fontSize: '18px'}}>2x</span><Image src={banheiro.src} alt={'Quantidade de quartos'} width={32} height={32} />
                     </Stack>
                 
                     <Stack direction={'row'} alignItems={'flex-end'} justifyContent={'center'} px={2} spacing={'5px'}>
-                        <span style={{fontSize: '18px'}}>2x</span><Image src={garagem} alt={'Quantidade de quartos'} width={32} height={32} />
+                        <span style={{fontSize: '18px'}}>2x</span><Image src={garagem.src} alt={'Quantidade de quartos'} width={32} height={32} />
                     </Stack>
                     
                 </Stack>

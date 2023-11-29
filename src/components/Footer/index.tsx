@@ -17,7 +17,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 // import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt'
 
-import logoEscuraCreci from '../../../public/static/images/logo_escura_creci.png'
+import logoEscuraCreci from '../../asserts/images/logo_escura_creci.png'
 
 
 

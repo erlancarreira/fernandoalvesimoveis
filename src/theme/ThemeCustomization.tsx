@@ -7,11 +7,9 @@ import Palette from './Palette'
 
 export default function ThemeCustomization({ children }: { children: ReactNode}) {
 
-    const theme = Palette('light')
-
     const themeOptions: any = useMemo(
         () => ({
-            
+            palette: Palette('light'),
             breakpoints: {
                 values: {
                     xs: 0,
@@ -31,7 +29,7 @@ export default function ThemeCustomization({ children }: { children: ReactNode})
             },
             
         }),
-        [theme]
+        []
     )
     
     const themes = createTheme(themeOptions)

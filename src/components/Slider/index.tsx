@@ -20,13 +20,19 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { styled } from '@mui/material'
 
+import assert_image1 from '../../asserts/images/image_0.jpg'
+import assert_image2 from '../../asserts/images/image_1.jpg'
+import assert_image3 from '../../asserts/images/image_2.jpg'
+import assert_image4 from '../../asserts/images/image_3.jpg'
+import assert_image5 from '../../asserts/images/image_4.jpg'
+
 
 const carouselImages = [
-    { src: '/static/images/image_0.jpg', alt: 'Imagem 1 da casa'},
-    { src: '/static/images/image_1.jpg', alt: 'Imagem 2 da casa'},
-    { src: '/static/images/image_2.jpg', alt: 'Imagem 3 da casa'},
-    { src: '/static/images/image_3.jpg', alt: 'Imagem 4 da casa'},
-    { src: '/static/images/image_4.jpg', alt: 'Imagem 5 da casa'}
+    { src: assert_image1.src, alt: 'Imagem 1 da casa'},
+    { src: assert_image2.src, alt: 'Imagem 2 da casa'},
+    { src: assert_image3.src, alt: 'Imagem 3 da casa'},
+    { src: assert_image4.src, alt: 'Imagem 4 da casa'},
+    { src: assert_image5.src, alt: 'Imagem 5 da casa'}
 ]
 
 const CustomBox = styled(Box)(({theme}) => ({
