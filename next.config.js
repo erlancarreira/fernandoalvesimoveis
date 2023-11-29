@@ -15,7 +15,7 @@ const nextConfig = {
             }
         ]
     },
-    distDir: 'build',
+    //distDir: 'build',
     //output: 'export',
     reactStrictMode: true,
     swcMinify: false,
